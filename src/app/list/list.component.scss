@@ -1,0 +1,49 @@
+
+.task-name {
+    font-size: 14px;
+    color: white;
+    padding-top: 15px;
+}
+
+.task-complete{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.remove-ico {
+    padding-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 25px;
+    display: none;
+}
+
+.cross-icon {
+    color: grey;
+}
+
+.checked-ico {
+    background: linear-gradient(#be93c5, #7bc6cc);
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    margin: 12px;
+  }
+
+.checked-icon {
+    color: white;
+    font-size: 10px;
+    transform: translate(5px, 4px);
+}
+
+.empty-task {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+li:hover, li:active {
+    .remove-ico {
+        display: block;
+    }
+}
+

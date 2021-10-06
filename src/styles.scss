@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+// Declaring Variables
+$background-color: #181824;
+$primary-color: #25273C;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Oxygen', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  // background-color: $background-color;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//Reusable code Todo List
+.list-holder:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.list-holder {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  background-color: $primary-color;
+  width: 490px;
+  height: 45px;
+  font-family: 'Oxygen';
+  font-size: 12px;
+  outline: none;
+  border: none;
+  border: 0px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-bottom: 1px solid silver;
+  padding: 10px 10px 10px 0px;
+}
+
+//Resusable AddTodo Input field and Todo List
+
+$primary-color: #25273C;
+$gradient-color: linear-gradient(#be93c5, #7bc6cc);
+
+.input-field {
+  width: 430px;
+    height: 45px;
+    background-color: $primary-color;
+    color: white;
+    font-family: 'Oxygen';
+    font-size: 12px;
+    outline: none;
+    border: none;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px 0px 5px 70px;
+    letter-spacing: 2px;
+}
+
+input .input-field {
+    padding-left: 25px;
+}
+
+.circle-ico {
+  background: #25273C;
+  border-radius: 50%;
+  border: 1px solid silver;
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+}
+
+.circle-ico:hover, .circle-ico:active {
+  border-image: linear-gradient(rgb(190,147,197), rgb(123,198,204)) 1;
+  // border-image-width: 10px;
+  // border-image: linear-gradient(#be93c5, #7bc6cc);
+}
+
+    .input-field::placeholder {
+      color:white;
+    }
+
+	//Resusable AddTodo Input field and Todo List
+
+  //Media Query
+
+  @media(max-width: 510px) {
+    .holder {
+      column-gap: 145px !important;
+  }
+
+  .input-field {
+    width: 230px !important;
+  }
+
+  .list-holder,.footer-holder,.footer-holder-responsive, .footer-holder-responsive-last {
+    width: 290px !important;
+  }
+}

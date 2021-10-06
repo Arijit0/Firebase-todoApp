@@ -1,0 +1,51 @@
+
+
+    <ul>
+        <li class="footer-holder hide">
+        
+            <div class="incomplete-task-count padding">
+                {{remainingTask}} items left
+            </div>
+    
+            <div class="all-task padding" >
+                <button [ngClass]="selected == 'all' ? 'active': ''" (click)="sortingTodoList('all')">All</button>
+            </div>
+    
+            <div class="incomplete-task padding" >
+                <button [ngClass]="selected == 'active' ? 'active': ''" (click)="sortingTodoList('active')">Active</button>
+            </div>
+    
+            <div class="complete-task padding" >
+                <button [ngClass]="selected == 'completed' ? 'active': ''" (click)="sortingTodoList('completed')">Completed</button>
+            </div>
+    
+            <div class="clear-complete-task padding">
+                <button (click)="DeleteCompletedTask()">Clear Completed</button>
+            </div>
+    
+        </li>
+
+        <li class="footer-holder-responsive show">
+            <div class="incomplete-task-count padding">
+                {{remainingTask}} items left
+            </div>
+
+            <div class="clear-complete-task padding">
+                <button (click)="DeleteCompletedTask()">Clear Completed</button>
+            </div>
+        </li>
+
+        <li class="footer-holder-responsive-last show margin-top">
+            <div class="all-task padding">
+                <button (click)="sortingTodoList('all')">All</button>
+            </div>
+    
+            <div class="incomplete-task padding">
+                <button (click)="sortingTodoList('active')">Active</button>
+            </div>
+    
+            <div class="complete-task padding">
+                <button (click)="sortingTodoList('completed')">Completed</button>
+            </div>
+        </li>
+    </ul>

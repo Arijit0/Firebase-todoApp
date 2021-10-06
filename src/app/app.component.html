@@ -1,0 +1,49 @@
+
+
+<section [ngClass]="isdarkMode? 'darkMode': 'lightMode'">
+
+    <div class="image_holder">
+      <img class="background-image" src="assets/bg-desktop-dark.jpg" alt="">
+    </div>
+
+  <div class="content-holder">
+
+    <div class="holder">
+      <div class="app-name">
+        <p>Todo</p>
+      </div>
+
+      <div class="icon" (click)="changeToLightMode()" *ngIf="isdarkMode">
+        <img class="light-bulb-icon" src="assets/light_mode_white_24dp.svg" alt="">
+      </div>
+
+      <div class="icon" (click)="changeToDarkMode()" *ngIf="!isdarkMode">
+        <img class="light-bulb-icon" src="assets/dark_mode_white_24dp.svg" alt="">
+      </div>
+    </div>
+
+    <div class="input-holder-app">
+      <app-add-todo (addEvent)="addTodo($event)"></app-add-todo>
+     </div>
+    
+    <div class="todo-list-holder">
+        <app-list 
+          (fetchEvent)="getDataFromDb()"
+          (delEvent)="deleteTask($event)"
+          (updateEvent)="updateStatus($event)"
+          [list]="taskList">
+        </app-list>
+    </div>
+    
+     <div class="footer-actions-holder">
+        <app-footer-actions 
+          [taskList]="taskListData"
+          (deleteEvent)="deleteCompTask($event)"
+          (sortingTaskEvent)="filteringTodoList($event)">
+        </app-footer-actions>
+     </div>
+    
+  </div>
+  
+  <!-- <app-array-methods></app-array-methods> -->
+</section>

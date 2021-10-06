@@ -1,0 +1,27 @@
+
+    <div class="list-holder empty-task" *ngIf="list.length == 0">
+        <div class="task-name">
+            <p class="">No task found!</p>
+         </div>
+    </div>
+    
+
+    <li class="list-holder"
+        *ngFor="let eachTask of list; let i=index">
+
+            <div class="circle-ico" *ngIf="eachTask.completed == false" (click)="updateTaskStatus(i,eachTask)">
+            </div>
+
+            <div class="checked-ico" *ngIf="eachTask.completed == true">
+                <i class="fa fa-check checked-icon"></i>
+            </div>
+        
+             <div class="task-name" [ngClass]="{'task-complete': eachTask.completed == true}">
+                <p class="">{{eachTask.task}}</p>
+             </div>
+        
+            <div 
+                class="remove-ico">
+                <i (click)="sendDeleteTaskToParent(eachTask)" class="fa fa-times cross-icon "></i>
+            </div>
+    </li>

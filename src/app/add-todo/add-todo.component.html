@@ -1,0 +1,17 @@
+<section>
+    <form [formGroup]="addPostForm">
+        <div class="input-holder">
+
+            <div class="circle-ico positioning"></div>
+            
+           <div>
+            <input type="text" 
+            class="input-field" 
+            placeholder="Create a new todo..."
+            formControlName="task"
+            (keyup.enter)="sendPostDataToParent()">
+           </div>
+           
+        </div>
+    </form>
+</section>
